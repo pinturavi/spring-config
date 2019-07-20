@@ -1,0 +1,32 @@
+server:
+  port: 7000
+management:
+  endpoint:
+    env:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: *
+spring:
+  application:
+    name:alert-service
+  mail:
+    protocol: smtp
+    port: 587
+    username: pintu541796@gmail.com
+    host: smtp.gmail.com
+    password: ${email-password}
+    properties:
+      mail:
+        ssl: true
+        smtp:
+          auth: true
+          timeout: 5000
+          writetimeout: 5000
+          starttls:
+            enable: true
+
+
+
+
